@@ -1,0 +1,31 @@
+Legibilidade:
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+#define MAX_PALAVRAS 1000
+
+// Array para armazenar as palavras válidas do jogo
+char palavrasValidas[MAX_PALAVRAS][20];
+// Verifica se uma palavra inserida pelo jogador é válida
+bool ehPalavraValida(const char* palavra) {
+  
+  // Percorre o array de palavras válidas e compara com a palavra inserida
+    for (int i = 0; i < MAX_PALAVRAS; i++) {  if (strcmp(palavra, palavrasValidas[i]) == 0) {
+ return true; } } return false; }
+// Calcula a pontuação de uma palavra válida
+int calcularPontuacao(const char* palavra) {
+    int pontuacao = 0;
+    int tamanho = strlen(palavra);
+    // Lógica para calcular a pontuação com base no tamanho e valor das letras
+    // ... (implementação detalhada) ...
+return pontuacao;
+} int main() { char palavraJogador[20];
+  printf("Digite a palavra: ");
+  scanf("%s", palavraJogador);
+   if (ehPalavraValida(palavraJogador)) {
+   int pontuacao = calcularPontuacao(palavraJogador);
+   printf("Palavra válida! Pontuação: %d\n", pontuacao);
+    } else {  printf("Palavra inválida.\n"); } return 0; }
+
+
